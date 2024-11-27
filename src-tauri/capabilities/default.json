@@ -5,6 +5,21 @@
   "windows": ["main"],
   "permissions": [
     "core:default",
-    "shell:allow-open"
+    "core:window:allow-minimize",
+    "core:window:allow-toggle-maximize",
+    "core:window:allow-close",
+    "core:window:allow-start-dragging",
+    "core:window:allow-set-focus",
+    "core:webview:allow-create-webview-window",
+    "dialog:default",
+    "fs:default",
+    "log:default",
+    "os:default",
+    "process:default",
+    "shell:allow-open",
+    "shell:allow-execute",
+    "shell:allow-kill",
+    "shell:allow-spawn",
+    "shell:allow-stdin-write"
   ]
 }
