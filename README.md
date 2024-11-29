@@ -16,7 +16,13 @@
 </p>
 
 ## 📄 许可证
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FA-kirami%2Fnonebot-desktop.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FA-kirami%2Fnonebot-desktop?ref=badge_shield)
+
 
 Code: AGPL-3.0 - 2024 - Akirami
 
 Logo: CC-BY-NC-ND, Designs by Akirami
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FA-kirami%2Fnonebot-desktop.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FA-kirami%2Fnonebot-desktop?ref=badge_large)
