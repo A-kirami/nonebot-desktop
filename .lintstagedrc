@@ -1,4 +1,4 @@
 {
-    "*.{js,jsx,ts,tsx,cjs,mjs,vue}": "eslint --fix --flag unstable_ts_config",
+    "*.{js,jsx,ts,tsx,cjs,mjs,vue}": "eslint --fix",
     "*.{css,vue}": "stylelint --fix"
 }

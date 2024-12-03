@@ -13,11 +13,15 @@
     "core:webview:allow-create-webview-window",
     "dialog:default",
     "fs:default",
+    "fs:allow-exists",
+    {
+      "identifier": "fs:scope",
+      "allow": [{ "path": "$APPDATA/**/*" }, { "path": "$APPCACHE/**/*" }]
+    },
     "log:default",
     "os:default",
     "process:default",
     "shell:allow-open",
-    "shell:allow-execute",
     "shell:allow-kill",
     "shell:allow-spawn",
     "shell:allow-stdin-write"

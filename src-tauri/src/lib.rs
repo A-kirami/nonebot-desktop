@@ -2,7 +2,12 @@ use tauri::Manager;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-    let mut builder = tauri::Builder::default();
+    let mut builder = tauri::Builder::default().setup(|app| {
+        #[cfg(dev)]
+        app.get_webview_window("main",).unwrap().open_devtools();
+
+        Ok(())
+    });
 
     #[cfg(desktop)]
     {

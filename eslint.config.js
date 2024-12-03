@@ -8,7 +8,7 @@ import unocss from '@unocss/eslint-config/flat'
 import vueMacros from '@vue-macros/eslint-config/flat'
 import eslintPluginImportX from 'eslint-plugin-import-x'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
-import pluginVue from 'eslint-plugin-vue'
+import eslintPluginVue from 'eslint-plugin-vue'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
@@ -18,13 +18,13 @@ const gitignorePath = path.resolve(__dirname, '.gitignore')
 
 export default tseslint.config(
   eslint.configs.recommended,
-  tseslint.configs.recommendedTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
+  tseslint.configs.recommended,
+  tseslint.configs.stylistic,
   eslintPluginUnicorn.configs['flat/recommended'],
   eslintPluginImportX.flatConfigs.recommended,
   eslintPluginImportX.flatConfigs.typescript,
   stylistic.configs['recommended-flat'],
-  ...pluginVue.configs['flat/recommended'],
+  ...eslintPluginVue.configs['flat/recommended'],
   unocss,
   vueMacros,
   includeIgnoreFile(gitignorePath),
@@ -42,12 +42,9 @@ export default tseslint.config(
     languageOptions: {
       parserOptions: {
         parser: tseslint.parser,
-        extraFileExtensions: ['.vue'],
         ecmaFeatures: {
           jsx: true,
         },
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
       },
       globals: { ...globals.browser, ...globals.node },
     },
@@ -87,7 +84,12 @@ export default tseslint.config(
           ignoreRestSiblings: true,
         },
       ],
-      '@typescript-eslint/prefer-nullish-coalescing': ['error', { ignorePrimitives: true }],
+      '@typescript-eslint/no-unused-expressions': ['error', {
+        allowShortCircuit: true,
+        allowTernary: true,
+        enforceForJSX: true,
+      }],
+      '@typescript-eslint/no-inferrable-types': ['warn', { ignoreParameters: true, ignoreProperties: true }],
       'import-x/no-named-as-default-member': 'off',
       'import-x/no-unresolved': ['error', { ignore: ['^virtual:', '^~(?!/).*'] }],
       'import-x/order': [
@@ -100,6 +102,8 @@ export default tseslint.config(
       ],
       'import-x/newline-after-import': 'warn',
       'unicorn/prevent-abbreviations': 'off',
+      'unicorn/consistent-function-scoping': 'off',
+      'unicorn/numeric-separators-style': ['warn', { number: { groupLength: 4 } }],
     },
   },
   {

@@ -21,6 +21,7 @@
     "color-hex-length": "long",
     "function-url-no-scheme-relative": true,
     "no-unknown-animations": true,
+    "import-notation": "string",
     "selector-pseudo-class-no-unknown": [
       true,
       {
@@ -40,6 +41,7 @@
         ]
       }
     ],
+    "@stylistic/max-line-length": null,
     "plugin/declaration-block-no-ignored-properties": true
   }
 }

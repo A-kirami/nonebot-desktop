@@ -15,8 +15,8 @@
     "typecheck": "vue-tsc --noEmit",
     "lint": "npm run lint:js && npm run lint:style",
     "lint:fix": "npm run lint:js:fix && npm run lint:style:fix",
-    "lint:js": "eslint \"**/*.{js,jsx,ts,tsx,cjs,mjs,vue}\" --flag unstable_ts_config",
-    "lint:js:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx,cjs,mjs,vue}\" --flag unstable_ts_config",
+    "lint:js": "eslint \"**/*.{js,jsx,ts,tsx,cjs,mjs,vue}\"",
+    "lint:js:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx,cjs,mjs,vue}\"",
     "lint:style": "stylelint \"**/*.{css,vue}\" --ignore-path .gitignore",
     "lint:style:fix": "stylelint --fix \"**/*.{css,vue}\" --ignore-path .gitignore",
     "lint:rs": "cargo clippy --manifest-path ./src-tauri/Cargo.toml --all-targets --all-features -- -D warnings",
@@ -87,7 +87,7 @@
     "unplugin-vue-router": "^0.10.8",
     "vite": "^6.0.1",
     "vite-plugin-vue-devtools": "^7.6.7",
-    "vite-plugin-vue-layouts": "^0.11.0",
+    "vite-plugin-vue-meta-layouts": "^0.5.1",
     "vue-tsc": "^2.1.10"
   },
   "packageManager": "bun@1.1.36"
